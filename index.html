@@ -6,218 +6,392 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link rel="stylesheet" href="style.css">
   </head>
-  <body class="light-mode">
-    <nav class="navbar">
-      <div class="logo">Didi.</div>
-      <div class="nav-links">
-      <a href="#" class="active">Accueil</a>
-      <a href="#" >Projet</a>
-      <a href="#" >Expérience</a>
-      <a href="#" >Compétence</a>
-      <a href="#" >Formation</a>
-      <a href="#" >Contact</a>
-      <i class="fas fa-moon theme-toggle" id="themeToggle"></i> <!-- Icône lune -->
-      </div>
-    </nav>
-    <section class="intro">
+  <body>
+    <!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">Didi.</div>
+
+  <!-- Icône du menu hamburger -->
+  <div class="menu-icon" id="menu-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Liens de navigation -->
+  <div class="nav-links" id="nav-links">
+    <a href="#home" class="active">Accueil</a>
+    <a href="#about">A propos</a>
+    <a href="#projects">Projet</a>
+    <a href="#experience">Expérience</a>
+    <a href="#skills">Compétence</a>
+    <a href="#formations">Formation</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+    <!-- INTRO -->
+    <section id="home" class="intro">
       <div class="main">
-        <!-- Partie gauche : texte -->
         <div class="detail">
+          <div class="tech-logos">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" alt="Laravel">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+          </div>
           <h1>
             Salut, je suis <span>OURO-M'BON Diyanatou</span>
           </h1>
-          <br />
-          <h3>Développeuse Web</h3>
-          <br />
-          <p>
-            Je suis étudiante en deuxième année système d'information à Lomé Business School ; passionnée par le développement web, le graphisme et aspirante analyste de données et project manager.
-          </p>
-          <br />
-          <div class="btn">
-            <button>Télécharger le CV</button>
-          </div>
+          <h3 class="typing">Développeuse web | Graphiste junior | Aspirante analyste de données</h3>
         </div>
-        <!-- Partie droite : image superposée à la forme -->
+        <!-- IMAGE -->
         <div class="img-sec">
           <div class="fake-button-shape"></div>
-          <img src="images/didi3.jpg"  alt=" fifi" class="img-w">
+          <img src="images/didi3.jpg" alt="Photo Didi" class="img-w">
         </div>
+      </div>
     </section>
-    <!-- EXPERIENCE PROFESSIONNELLE -->
-<section class="experience">
-  <h2>Expérience professionnelle</h2>
-  <div class="experience-container">
-   <!-- Exemple : Développeur avec lien GitHub -->
-    <div class="experience-card">
-      <a href="https://github.com/tonprofil" target="_blank">
-        <img src="images/didi3.jpg" alt="Projet Développeur">
-      </a>
-      <h3>Développeuse Web</h3>
-      <p class="company">Startup Innovante ABC</p>
-      <p class="time">Mars 2022 - Présent</p>
-      <p class="description">
-        Développement d’applications web, gestion de bases de données, collaboration avec l’équipe produit pour livrer des fonctionnalités.
+<!-- ===== À PROPOS ===== -->
+<section id="about" class="about">
+  <h2>À propos de moi</h2>
+
+  <div class="about-card">
+    <div class="about-img">
+      <img src="images/didi3.jpg" alt="Photo de Diyanatou">
+    </div>
+
+    <div class="about-text">
+      <p>
+        Étudiante en Bachelor 2 Systèmes d’Information à Lomé Business School, je me forme activement dans le domaine du numérique avec un intérêt particulier pour le développement web et la gestion de projets IT. Passionnée par la conception et la réalisation de solutions numériques, j’ai participé à plusieurs projets académiques et personnels qui m’ont permis de renforcer mes compétences en HTML, CSS, PHP et Laravel.
       </p>
-      <div class="software-tags">
-      <span class="tag">Laravel</span>
-      <span class="tag">PHP</span>
-      <span class="tag">Git</span>
+      <p>
+        Curieuse et rigoureuse, je m’intéresse également à la coordination de projets, à la planification et à l’organisation des tâches pour garantir le succès des livrables. Mon objectif est de devenir gestionnaire de projet IT, capable de piloter des équipes et des projets numériques en transformant les idées en solutions concrètes et efficaces.
+      </p>
+      <p><strong>N’hésitez pas à me contacter pour échanger ou collaborer !</strong></p>
+    </div>
+  </div>
+</section>
+
+ <!-- COMPÉTENCES -->
+<section id="skills" class="skills-section">
+  <h2>Mes compétences</h2>
+  <div class="skills-grid">
+    <div class="skill-item">
+      <h3>Langages de programmation</h3>
+      <ul>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP"> PHP</li>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML"> HTML</li>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"> CSS</li>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"> JavaScript</li>
+      </ul>
+    </div>
+
+    <div class="skill-item">
+      <h3>Frameworks</h3>
+      <ul>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" alt="Laravel"> Laravel</li>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS"> Tailwind CSS</li>
+      </ul>
+    </div>
+
+    <div class="skill-item">
+      <h3>Base de données</h3>
+      <ul>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"> MySQL</li>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="Modélisation"> Modélisation de données</li>
+      </ul>
+    </div>
+
+    <div class="skill-item">
+      <h3>Outils & Technologies</h3>
+      <ul>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"> GitHub</li>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma"> Figma</li>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" alt="Canva"> Canva</li>
+      </ul>
+    </div>
+
+    <div class="skill-item">
+      <h3>Compétences interpersonnelles</h3>
+      <ul>
+        <li>Communication</li>
+        <li>Travail en équipe</li>
+        <li>Gestion de projet</li>
+        <li>Problem solving</li>
+      </ul>
+    </div>
+  </div>
+</section>
+ <section id="projects"class="projects-section">
+  <h2>Mes projets</h2>
+
+  <!-- FILTRES -->
+  <div class="filter-buttons">
+    <button class="filter-btn active" data-filter="all">Tous</button>
+    <button class="filter-btn" data-filter="design">Design</button>
+    <button class="filter-btn" data-filter="dev">Développement Web</button>
+    <button class="filter-btn" data-filter="stage">Stage</button>
+    <button class="filter-btn" data-filter="perso">Personnel</button>
+  </div>
+  <!-- PROJETS -->
+  <div class="projects-grid">
+
+    <!-- Projet 1 -->
+    <div class="project-item design">
+      <img src="images/didi1.jpg" alt="Affiche professionnelle">
+      <p>Réalisation d’une affiche professionnelle sur Figma et Canva.</p>
+      <div class="tech-tags">
+        <span>Figma</span>
+        <span>Canva</span>
+        <span>Design graphique</span>
+      </div>
+      <div class="project-links">
+        <a href="#" class="btn-site">Voir le projet</a>
+        <a href="#" class="btn-git">GitHub</a>
       </div>
     </div>
-    <!-- Exemple : Graphiste avec carrousel -->
-    <div class="experience-card">
-      <div class="carousel">
-        <div class="slides">
-          <img src="images/didi1.jpg" alt="Projet Graphiste 1">
-          <img src="images/didi2.jpg" alt="Projet Graphiste 2">
-          <img src="images/didi4.jpg" alt="Projet Graphiste 3">
-          <img src="images/didi5.jpg" alt="Projet Graphiste 1">
-          <img src="images/didi6.jpg" alt="Projet Graphiste 2">
-          <img src="images/didi7.jpg" alt="Projet Graphiste 3">
+
+    <!-- Projet 2 -->
+    <div class="project-item dev">
+      <img src="images/didi2.jpg" alt="Affiche professionnelle">
+      <p>Site web personnel développé en HTML, CSS et PHP.</p>
+      <div class="tech-tags">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>PHP</span>
+      </div>
+      <div class="project-links">
+        <a href="#" class="btn-site">Voir le site</a>
+        <a href="#" class="btn-git">GitHub</a>
+      </div>
+    </div>
+
+    <!-- Projet 3 -->
+    <div class="project-item dev stage">
+      <img src="images/didi4.jpg" alt="Affiche professionnelle">
+      <p>Participation au développement d’un module d’administration sous Laravel.</p>
+      <div class="tech-tags">
+        <span>Laravel</span>
+        <span>MySQL</span>
+        <span>Tailwind CSS</span>
+      </div>
+      <div class="project-links">
+        <a href="#" class="btn-site">Voir le site</a>
+        <a href="#" class="btn-git">GitHub</a>
+      </div>
+    </div>
+
+    <!-- Projet 4 -->
+    <div class="project-item perso dev">
+      <img src="images/didi5.jpg" alt="Affiche professionnelle">
+      <p>Plateforme d’entraide entre développeurs étudiants.</p>
+      <div class="tech-tags">
+        <span>PHP</span>
+        <span>MySQL</span>
+        <span>HTML/CSS</span>
+      </div>
+      <div class="project-links">
+        <a href="#" class="btn-site">Voir le site</a>
+        <a href="#" class="btn-git">GitHub</a>
+      </div>
+    </div>
+
+    <!-- Projet 5 -->
+    <div class="project-item design">
+      <img src="images/didi6.jpg" alt="Affiche professionnelle">
+      <p>Création de visuels cohérents pour la communication du projet.</p>
+      <div class="tech-tags">
+        <span>Figma</span>
+        <span>Canva</span>
+        <span>Branding</span>
+      </div>
+      <div class="project-links">
+        <a href="#" class="btn-site">Voir le projet</a>
+        <a href="#" class="btn-git">GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="experience" class="experience">
+  <h2>Experience</h2><br>
+  <div class="exp-timeline">
+    <!-- Item 1 -->
+    <div class="exp-row">
+      <div class="exp-date">
+        <span>Juillet 2025 - Septembre 2025</span>
+      </div>
+      <div class="exp-content">
+        <h3>Développeuse Web <span class="company">|Port Autonome de Lomé </span></h3>
+        <p>Développement d’application web de gestion des absences et congés à la DSI du Port Autonome de Lomé</p>
+      </div>
+    </div>
+
+    <!-- Item 2 -->
+    <div class="exp-row">
+      <div class="exp-date">
+        <span>Janvier 2025 - Aujourd'hui</span>
+      </div>
+      <div class="exp-content">
+        <h3>Coordonatrice <span class="company">|Daytona</span></h3>
+        <p>j'aide le pacer dans l'organisation de l'evenement et dans la coordination de l'equipe Daytona Togo.</p>
+      </div>
+    </div>
+
+    <!-- Item 3 -->
+    <div class="exp-row">
+      <div class="exp-date">
+        <span>Décembre 2025 - Aujourd'hui</span>
+      </div>
+      <div class="exp-content">
+        <h3>Graphiste <span class="company">|Amazing Girls in Tech</span></h3>
+        <p> Je conçois des affiches avec figma pour la communication des activités de la communauté sur le projet Amazing Tech Workshops</p>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+    <!-- FORMATION -->
+    <section id="formations" class="education">
+      <h2>Parcours académique</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Bachelor 2 Système d'information</h3>
+            <p>Lomé Business School</p>
+            <span>2023 - 2025</span>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Baccalauréat série D</h3>
+            <p>Lycée Bamabodolo</p>
+            <span>2019 - 2022</span>
+          </div>
         </div>
       </div>
-      <h3>Graphiste</h3>
-      <p class="company">Agence Créative XYZ</p>
-      <p class="time">Janvier 2023 - Décembre 2023</p>
-      <p class="description">
-        Création de visuels publicitaires, conception de chartes graphiques, gestion de projets graphiques pour divers clients.
-      </p>
-      <div class="software-tags">
-      <span class="tag">Photoshop</span>
-      <span class="tag">Illustrator</span>
-      <span class="tag">Figma</span>
-  </div>
-    </div>
-  </div>
-  </div>
-</div>
-</section>
-<!-- CERTIFICATIONS -->
-<section class="certifications">
-  <h2>Certifications</h2>
-  <div class="certifications-container">
+    </section>
 
-    <div class="cert-card">
-      <img src="images/didi.jpg" alt="Certification 1">
-      <h4>HTML & CSS - OpenClassrooms</h4>
-      <span>2024</span>
-    </div>
-
-    <div class="cert-card">
-      <img src="images/didi1.jpg" alt="Certification 2">
-      <h4>Laravel Fundamentals - Udemy</h4>
-      <span>2025</span>
-    </div>
-    <div class="cert-card">
-      <img src="images/didi.jpg" alt="Certification 1">
-      <h4>HTML & CSS - OpenClassrooms</h4>
-      <span>2024</span>
-    </div>
-
-    <div class="cert-card">
-      <img src="images/didi1.jpg" alt="Certification 2">
-      <h4>Laravel Fundamentals - Udemy</h4>
-      <span>2025</span>
-    </div>
-  </div>
-</section>
-    <section class="skills">
-  <h2>Mes Compétences</h2>
-  <div class="skills-container">
-    <div class="skill-card html-card">
-      <i class="fa-brands fa-html5"></i>
-      <span>HTML</span>
-    </div>
-    <div class="skill-card css-card">
-      <i class="fa-brands fa-css3-alt"></i>
-      <span>CSS</span>
-    </div>
-    <div class="skill-card php-card">
-      <i class="fa-brands fa-php"></i>
-      <span>PHP</span>
-    </div>
-    <div class="skill-card laravel-card">
-      <img src="https://laravel.com/img/logomark.min.svg" alt="Laravel">
-      <span>Laravel</span>
-    </div>
-    <div class="skill-card figma-card">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma">
-      <span>Figma</span>
-    </div>
-    <div class="skill-card mysql-card">
-      <i class="fa-solid fa-database"></i>
-      <span>MySQL</span>
-    </div>
-    <div class="skill-card github-card">
-      <i class="fa-brands fa-github"></i>
-      <span>GitHub</span>
-    </div>
-  </div>
-</section>
-<section class="education">
-  <h2>Parcours académique</h2>
-  <div class="timeline">
-
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-content">
-        <h3>Bachelor 2 système d'information</h3>
-        <p>Lomé Business School</p>
-        <span>2023 - 2025</span>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-content">
-        <h3>Baccalauréat série D</h3>
-        <p>Lycée Bamabodolo</p>
-        <span>2019 - 2022</span>
-      </div>
-    </div>
-  </div>
-</section>
-    <section class="contact-section">
+  <!-- CONTACT -->
+<section id="contact" class="contact-section">
   <h2>Contact</h2>
-  <div class="contact-cards">
-    <!-- Téléphone -->
-    <div class="card  Telephone-card">
-      <h3>Téléphone</h3>
-      <p><i class="fas fa-phone"></i> +228 90 53 32 88</p>
-      <p><i class="fas fa-phone"></i> +228 90 00 00 00</p>
+
+  <div class="contact-container">
+    <!-- Colonne gauche -->
+    <div class="contact-column">
+      <div class="contact-card">
+        <i class="fab fa-linkedin"></i>
+        <div>
+          <h3>LinkedIn</h3>
+          <a href="https://www.linkedin.com/in/diyanatou-ouro-mbon/" target="_blank">
+            diyanatou-ouro-mbon
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <i class="fas fa-envelope"></i>
+        <div>
+          <h3>Email</h3>
+          <p>dianaourombon@gmail.com</p>
+        </div>
+      </div>
     </div>
-    <!-- Email -->
-    <div class="card mail-card">
-      <h3>Email</h3>
-      <p><i class="fas fa-envelope"></i> dianaourombon@gmail.com</p>
+
+    <!-- Colonne centrale -->
+    <div class="contact-column center">
+      <div class="cv-download">
+        <h3>Télécharger mon CV</h3>
+        <div class="cv-buttons">
+          <a href="assets/files/Diyanatou.pdf" class="cv-btn" download>🇫🇷 CV Français</a>
+          <a href="assets/files/Diyanatou.pdf" class="cv-btn" download>🇬🇧 CV Anglais</a>
+        </div>
+      </div>
     </div>
-    <!-- LinkedIn -->
-    <a class="card  link-card" href="https://www.linkedin.com/in/diyanatou-ouro-mbon/" target="_blank">
-      <h3>LinkedIn</h3>
-      <i class="fab fa-linkedin"></i>
-    </a>
-    <!-- GitHub -->
-    <a class="card  Git-card" href="https://github.com/Diyanatou" target="_blank">
-      <h3>GitHub</h3>
-      <i class="fab fa-github"></i>
-    </a>
+
+    <!-- Colonne droite -->
+    <div class="contact-column">
+      <div class="contact-card">
+        <i class="fas fa-phone"></i>
+        <div>
+          <h3>Téléphone</h3>
+          <p>+228 90 53 32 88</p>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <i class="fab fa-github"></i>
+        <div>
+          <h3>GitHub</h3>
+          <a href="https://github.com/Diyanatou" target="_blank">
+            github.com/Diyanatou
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
-    <script>
-        // Liens actifs
-    const navLinks = document.querySelectorAll(".nav-links a");
-    navLinks.forEach(link => {
-      link.addEventListener("click", function () {
-        navLinks.forEach(l => l.classList.remove("active"));
-        this.classList.add("active");
+<script>
+  // Gestion des liens actifs
+  const links = document.querySelectorAll(".nav-links a");
+  links.forEach(link => {
+    link.addEventListener("click", function () {
+      links.forEach(l => l.classList.remove("active"));
+      this.classList.add("active");
+    });
+  });
+
+  // Menu hamburger
+  const menuIcon = document.getElementById("menu-icon");
+  const navLinksContainer = document.getElementById("nav-links");
+
+  menuIcon.addEventListener("click", () => {
+    navLinksContainer.classList.toggle("show");
+    menuIcon.classList.toggle("active");
+  });
+
+  // Animation "scroll" pour les cartes d'expérience
+  const expCards = document.querySelectorAll('.experience-card');
+
+  function showExpCards() {
+    const triggerBottom = window.innerHeight * 0.8;
+    expCards.forEach(card => {
+      const cardTop = card.getBoundingClientRect().top;
+      if (cardTop < triggerBottom) {
+        card.classList.add('show');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', showExpCards);
+  window.addEventListener('load', showExpCards);
+
+  // Filtres des projets
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const projects = document.querySelectorAll(".project-item");
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelector(".filter-btn.active").classList.remove("active");
+      btn.classList.add("active");
+
+      const category = btn.getAttribute("data-filter");
+
+      projects.forEach(project => {
+        if (category === "all" || project.classList.contains(category)) {
+          project.style.display = "block";
+        } else {
+          project.style.display = "none";
+        }
       });
     });
-     const toggleBtn = document.getElementById('themeToggle');
-  const body = document.body;
-
-  toggleBtn.addEventListener('click', () => {
-    body.classList.toggle('light-mode');
   });
 </script>
+
   </body>
 </html>
