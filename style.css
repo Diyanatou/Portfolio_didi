@@ -1009,3 +1009,21 @@ body {
     align-items: center;
   }
 }
+section {
+  padding: 70px 8%;
+}
+@media (max-width: 768px) {
+  section {
+    padding: 40px 6%;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    padding-top: 60px;
+  }
+
+  .intro {
+    padding-top: 30px;
+  }
+}
+
