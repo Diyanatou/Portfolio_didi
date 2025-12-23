@@ -164,8 +164,8 @@ body {
   display: flex;
   flex-direction: row; 
   justify-content: space-between;
-  align-items: flex-start;
-  text-align: left;
+  align-items: center;
+  text-align: center;
   width: 100%;
   gap: 15px;
   flex-wrap: wrap; /* responsive */
