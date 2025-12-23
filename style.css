@@ -8,15 +8,11 @@
 
 body {
   scroll-behavior: smooth;
-  padding-top: 60px;     
+  padding-top: 80px;     
   background: white;
   color: Black;
 }
-@media (max-width: 768px) {
-  body {
-    padding-top: 50px;
-  }
-}
+
 .navbar {
   position: fixed;         /* fixe la navbar */
   top: 0;                  /* la place en haut */
@@ -142,7 +138,7 @@ body {
 
 /* SECTION INTRO */
 .intro {
-  padding: 60px 8% 20px;
+  padding: 60px 8% 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -152,11 +148,7 @@ body {
   flex-wrap: wrap;
   gap: 30px;
 }
-@media (max-width: 768px) {
-  .intro {
-    padding: 30px 6% 15px;
-  }
-}
+
 /* Marges internes */
 .intro h1,
 .intro h3,
@@ -330,18 +322,14 @@ body {
   background: #fff;
   border-radius: 20px;
   border: 2px solid #FF1493;
-  padding: 40px 40px 40px 40px;
+  padding: 60px 40px 40px 140px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   max-width: 900px;
   margin: 0 auto;
   text-align: justify;
   transition: transform 0.3s ease;
 }
-@media (max-width: 768px) {
-  .about-card {
-    padding: 30px 20px;
-  }
-}
+
 .about-card:hover {
   transform: translateY(-5px);
 }
@@ -605,12 +593,7 @@ body {
   flex-direction: column;
   gap: 40px;
   margin-top: 20px;
-  padding-left: 50px;
-}
-@media (max-width: 768px) {
-  .exp-timeline {
-    padding-left: 0;
-  }
+  padding-left: 70px;
 }
 
 /* ===== Lignes ===== */
@@ -1031,4 +1014,13 @@ body {
   padding: 0;
 }
 
+@media (max-width: 768px) {
+  body {
+    padding-top: 60px;
+  }
+
+  .intro {
+    padding-top: 30px;
+  }
+}
 
