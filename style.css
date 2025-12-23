@@ -135,44 +135,48 @@ body {
     display: flex;
   }
 }
-
 /* SECTION INTRO */
 .intro {
-  padding: 60px 8% 20px;
+  padding: 30px 8% 20px; /* réduit le padding top */
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start; /* alignement en haut pour éviter trop d'espace */
   background: #fff;
   color: #000;    
   font-family: 'Poppins', sans-serif;
   flex-wrap: wrap;
-  gap: 30px;
-}
-
-@media (max-width: 768px) {
-  .intro {
-    padding: 30px 6% 15px;
-  }
+  gap: 20px; /* réduit l'espacement entre texte et image */
 }
 
 /* Marges internes */
 .intro h1,
 .intro h3,
 .intro p {
-  margin: 10px 0;
+  margin: 5px 0; /* réduit les marges des textes */
 }
 
 .intro br {
   display: none;
 }
 
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .intro {
+    padding: 20px 6% 15px; /* padding top plus petit sur mobile */
+    gap: 15px; /* moins d'espace entre texte et image */
+    align-items: flex-start; /* texte et image collés en haut */
+  }
+}
+
 /* CONTENEUR PRINCIPAL */
 .main {
   display: flex;
+  flex-direction: column; 
   justify-content: space-between;
   align-items: center;
+  text-align: center;
   width: 100%;
-  gap: 30px;
+  gap: 15px;
   flex-wrap: wrap; /* responsive */
 }
 
