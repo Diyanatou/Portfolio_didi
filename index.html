@@ -1,422 +1,618 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <!-- NAVBAR -->
-<nav class="navbar">
-  <div class="logo">Didi.</div>
 
-  <!-- Icône du menu hamburger -->
-  <div class="menu-icon" id="menu-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-  <!-- Liens de navigation -->
-  <div class="nav-links" id="nav-links">
-    <a href="#home" class="active">Accueil</a>
-    <a href="#about">A propos</a>
-    <a href="#projects">Projet</a>
-    <a href="#experience">Expérience</a>
-    <a href="#skills">Compétence</a>
-    <a href="#formations">Formation</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
-    <!-- INTRO -->
-    <section id="home" class="intro">
-      <div class="main">
-        <div class="detail">
-          <div class="tech-logos">
-            <img src="assets/devicons/html5-original.svg" alt="HTML">
-            <img src="assets/devicons/css3-original.svg" alt="CSS">
-            <img src="assets/devicons/php-original.svg" alt="PHP">
-            <img src="assets/devicons/laravel-original.svg" alt="Laravel">
-            <img src="assets/devicons/figma-original.svg" alt="Figma">
-            <img src="assets/devicons/mysql-original.svg" alt="MySQL">
-            <img src="assets/devicons/github.svg" alt="GitHub">
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">Didi.</div>
+
+    <!-- Icône du menu hamburger -->
+    <div class="menu-icon" id="menu-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Liens de navigation -->
+    <div class="nav-links" id="nav-links">
+      <a href="#home" class="active">Accueil</a>
+      <a href="#about">A propos</a>
+      <a href="#projects">Projet</a>
+      <a href="#experience">Expérience</a>
+      <a href="#skills">Compétence</a>
+      <a href="#formations">Formation</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+  <!-- INTRO -->
+  <section id="home" class="intro">
+    <div class="main">
+      <div class="detail">
+        <div class="tech-logos">
+          <img src="assets/devicons/html5-original.svg" alt="HTML">
+          <img src="assets/devicons/css3-original.svg" alt="CSS">
+          <img src="assets/devicons/php-original.svg" alt="PHP">
+          <img src="assets/devicons/laravel-original.svg" alt="Laravel">
+          <img src="assets/devicons/figma-original.svg" alt="Figma">
+          <img src="assets/devicons/mysql-original.svg" alt="MySQL">
+          <img src="assets/devicons/github.svg" alt="GitHub">
+        </div>
+        <h1>
+          Salut, je suis <span>OURO-M'BON Diyanatou</span>
+        </h1>
+        <h3 class="typing">Développeuse web | Graphiste junior | Aspirante analyste de données</h3>
+      </div>
+      <!-- IMAGE -->
+      <div class="img-sec">
+        <div class="fake-button-shape"></div>
+        <img src="images/didi3.jpg" alt="Photo Didi" class="img-w">
+      </div>
+    </div>
+  </section>
+  <!-- ===== À PROPOS ===== -->
+  <section id="about" class="about">
+    <h2>À propos de moi</h2>
+
+    <div class="about-card">
+      <div class="about-img">
+        <img src="images/didi3.jpg" alt="Photo de Diyanatou">
+      </div>
+
+      <div class="about-text">
+        <p>
+          Étudiante en Bachelor 3 Systèmes d’Information, spécialité Génie logiciel, à Lomé Business School, je me forme
+          dans le numérique, avec un intérêt pour le développement web et la gestion de projets IT. J’ai participé à
+          plusieurs projets académiques et personnels, renforçant mes compétences en HTML, CSS, PHP et Laravel.
+        </p>
+        <p>
+          Curieuse et rigoureuse, je m’intéresse à la coordination de projets et à l’organisation des tâches pour
+          garantir leur succès.
+        </p>
+        <p><strong>N’hésitez pas à me contacter pour échanger ou collaborer !</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPÉTENCES -->
+  <section id="skills" class="skills-section">
+    <h2>Mes compétences</h2>
+    <div class="skills-grid">
+      <div class="skill-item">
+        <h3>Langages de programmation</h3>
+        <ul>
+          <li><img src="assets/devicons/php-original.svg" alt="PHP"> PHP</li>
+          <li><img src="assets/devicons/html5-original.svg" alt="HTML"> HTML</li>
+          <li><img src="assets/devicons/css3-original.svg" alt="CSS"> CSS</li>
+          <li><img src="assets/devicons/javascript-original.svg" alt="JavaScript"> JavaScript</li>
+        </ul>
+      </div>
+
+      <div class="skill-item">
+        <h3>Frameworks</h3>
+        <ul>
+          <li><img src="assets/devicons/laravel-original.svg" alt="Laravel"> Laravel</li>
+          <li><img src="assets/devicons/tailwindcss-original.svg" alt="Tailwind CSS"> Tailwind CSS</li>
+          <li><img src="assets/devicons/nextjs-original.svg" alt="Next JS"> Next js</li>
+        </ul>
+      </div>
+
+      <div class="skill-item">
+        <h3>Base de données</h3>
+        <ul>
+          <li><img src="assets/devicons/mysql-original.svg" alt="MySQL"> MySQL</li>
+          <li><img src="assets/devicons/sqlite-original.svg" alt="Modélisation"> Modélisation de données</li>
+        </ul>
+      </div>
+
+      <div class="skill-item">
+        <h3>Outils & Technologies</h3>
+        <ul>
+          <li><img src="assets/devicons/github.svg" alt="GitHub"> GitHub</li>
+          <li><img src="assets/devicons/figma-original.svg" alt="Figma"> Figma</li>
+          <li><img src="assets/devicons/canva-original.svg" alt="Canva"> Canva</li>
+        </ul>
+      </div>
+
+      <div class="skill-item">
+        <h3>Compétences interpersonnelles</h3>
+        <ul>
+          <li>Communication</li>
+          <li>Travail en équipe</li>
+          <li>Gestion de projet</li>
+          <li>Problem solving</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section id="projects" class="projects-section">
+    <h2>Mes projets</h2>
+
+    <!-- FILTRES -->
+    <div class="filter-buttons">
+      <button class="filter-btn active" data-filter="all">Tous</button>
+      <button class="filter-btn" data-filter="design">Design</button>
+      <button class="filter-btn" data-filter="dev">Développement Web</button>
+      <button class="filter-btn" data-filter="stage">Stage</button>
+      <button class="filter-btn" data-filter="perso">Personnel</button>
+    </div>
+    <!-- PROJETS -->
+    <div class="projects-grid">
+
+      <!-- Projet 1 -->
+      <div class="project-card dev">
+        <div class="card-header">
+          <img src="images/chic.png" alt="Site personnel">
+        </div>
+        <div class="card-body">
+          <h3 class="project-title">Chic Packaging</h3>
+          <p class="project-description">Réalisation d’un site de présentation de packaging avec un design moderne et
+            épuré.</p>
+          <div class="tech-tags">
+            <span>HTML</span>
+            <span>Tailwind CSS</span>
+            <span>JavaScript</span>
           </div>
-          <h1>
-            Salut, je suis <span>OURO-M'BON Diyanatou</span>
-          </h1>
-          <h3 class="typing">Développeuse web | Graphiste junior | Aspirante analyste de données</h3>
-        </div>
-        <!-- IMAGE -->
-        <div class="img-sec">
-          <div class="fake-button-shape"></div>
-          <img src="images/didi3.jpg" alt="Photo Didi" class="img-w">
-        </div>
-      </div>
-    </section>
-<!-- ===== À PROPOS ===== -->
-<section id="about" class="about">
-  <h2>À propos de moi</h2>
-
-  <div class="about-card">
-    <div class="about-img">
-      <img src="images/didi3.jpg" alt="Photo de Diyanatou">
-    </div>
-
-    <div class="about-text">
-      <p>
-        Étudiante en Bachelor 3 Systèmes d’Information, spécialité Génie logiciel, à Lomé Business School, je me forme dans le numérique, avec un intérêt pour le développement web et la gestion de projets IT. J’ai participé à plusieurs projets académiques et personnels, renforçant mes compétences en HTML, CSS, PHP et Laravel.
-      </p>
-      <p>
-        Curieuse et rigoureuse, je m’intéresse à la coordination de projets et à l’organisation des tâches pour garantir leur succès.
-      </p>
-      <p><strong>N’hésitez pas à me contacter pour échanger ou collaborer !</strong></p>
-    </div>
-  </div>
-</section>
-
- <!-- COMPÉTENCES -->
-<section id="skills" class="skills-section">
-  <h2>Mes compétences</h2>
-  <div class="skills-grid">
-    <div class="skill-item">
-      <h3>Langages de programmation</h3>
-      <ul>
-        <li><img src="assets/devicons/php-original.svg" alt="PHP"> PHP</li>
-        <li><img src="assets/devicons/html5-original.svg" alt="HTML"> HTML</li>
-        <li><img src="assets/devicons/css3-original.svg" alt="CSS"> CSS</li>
-        <li><img src="assets/devicons/javascript-original.svg" alt="JavaScript"> JavaScript</li>
-      </ul>
-    </div>
-
-    <div class="skill-item">
-      <h3>Frameworks</h3>
-      <ul>
-        <li><img src="assets/devicons/laravel-original.svg" alt="Laravel"> Laravel</li>
-        <li><img src="assets/devicons/tailwindcss-original.svg" alt="Tailwind CSS"> Tailwind CSS</li>
-        <li><img src="assets/devicons/nextjs-original.svg" alt="Next JS"> Next js</li>
-      </ul>
-    </div>
-
-    <div class="skill-item">
-      <h3>Base de données</h3>
-      <ul>
-        <li><img src="assets/devicons/mysql-original.svg" alt="MySQL"> MySQL</li>
-        <li><img src="assets/devicons/sqlite-original.svg" alt="Modélisation"> Modélisation de données</li>
-      </ul>
-    </div>
-
-    <div class="skill-item">
-      <h3>Outils & Technologies</h3>
-      <ul>
-        <li><img src="assets/devicons/github.svg" alt="GitHub"> GitHub</li>
-        <li><img src="assets/devicons/figma-original.svg" alt="Figma"> Figma</li>
-        <li><img src="assets/devicons/canva-original.svg" alt="Canva"> Canva</li>
-      </ul>
-    </div>
-
-    <div class="skill-item">
-      <h3>Compétences interpersonnelles</h3>
-      <ul>
-        <li>Communication</li>
-        <li>Travail en équipe</li>
-        <li>Gestion de projet</li>
-        <li>Problem solving</li>
-      </ul>
-    </div>
-  </div>
-</section>
- <section id="projects"class="projects-section">
-  <h2>Mes projets</h2>
-
-  <!-- FILTRES -->
-  <div class="filter-buttons">
-    <button class="filter-btn active" data-filter="all">Tous</button>
-    <button class="filter-btn" data-filter="design">Design</button>
-    <button class="filter-btn" data-filter="dev">Développement Web</button>
-    <button class="filter-btn" data-filter="stage">Stage</button>
-    <button class="filter-btn" data-filter="perso">Personnel</button>
-  </div>
-  <!-- PROJETS -->
-  <div class="projects-grid">
-
-    <!-- Projet 1 -->
-    <div class="project-item dev">
-      <img src="images/chic.png" alt="Site personnel">
-      <p>Réalisation d’un site de presentation de packaging.</p>
-      <div class="tech-tags">
-        <span>html</span>
-        <span>tailwindcss</span>
-        <span>javascript</span>
-      </div>
-      <div class="project-links">
-        <a href="#" class="btn-site">Voir le projet</a>
-        <a href="#" class="btn-git">GitHub</a>
-      </div>
-    </div>
-        <!-- Projet 2 -->
-    <div class="project-item dev">
-      <img src="images/fifi1.jpg" alt="Projet personnel">
-      <p>Réalisation d’un portfolio presentant mes competences et projets.</p>
-      <div class="tech-tags">
-        <span>html</span>
-        <span>css</span>
-        <span>javascript</span>
-      </div>
-      <div class="project-links">
-        <a href="#" class="btn-site">Voir le projet</a>
-        <a href="#" class="btn-git">GitHub</a>
-      </div>
-    </div>
-
-    <!-- Projet 2 -->
-    <div class="project-item dev">
-      <img src="images/didi2.jpg" alt="Affiche professionnelle">
-      <p>Site web personnel développé en HTML, CSS et PHP.</p>
-      <div class="tech-tags">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>PHP</span>
-      </div>
-      <div class="project-links">
-        <a href="#" class="btn-site">Voir le site</a>
-        <a href="#" class="btn-git">GitHub</a>
-      </div>
-    </div>
-
-    <!-- Projet 3 -->
-    <div class="project-item dev stage">
-      <img src="images/didi4.jpg" alt="Affiche professionnelle">
-      <p>Participation au développement d’un module d’administration sous Laravel.</p>
-      <div class="tech-tags">
-        <span>Laravel</span>
-        <span>MySQL</span>
-        <span>Tailwind CSS</span>
-      </div>
-      <div class="project-links">
-        <a href="#" class="btn-site">Voir le site</a>
-        <a href="#" class="btn-git">GitHub</a>
-      </div>
-    </div>
-
-    <!-- Projet 4 -->
-    <div class="project-item perso dev">
-      <img src="images/didi5.jpg" alt="Affiche professionnelle">
-      <p>Plateforme d’entraide entre développeurs étudiants.</p>
-      <div class="tech-tags">
-        <span>PHP</span>
-        <span>MySQL</span>
-        <span>HTML/CSS</span>
-      </div>
-      <div class="project-links">
-        <a href="#" class="btn-site">Voir le site</a>
-        <a href="#" class="btn-git">GitHub</a>
-      </div>
-    </div>
-
-    <!-- Projet 5 -->
-    <div class="project-item design">
-      <img src="images/didi6.jpg" alt="Affiche professionnelle">
-      <p>Création de visuels cohérents pour la communication du projet.</p>
-      <div class="tech-tags">
-        <span>Figma</span>
-        <span>Canva</span>
-        <span>Branding</span>
-      </div>
-      <div class="project-links">
-        <a href="#" class="btn-site">Voir le projet</a>
-        <a href="#" class="btn-git">GitHub</a>
-      </div>
-    </div>
-  </div>
-</section>
-<section id="experience" class="experience">
-  <h2>Mes Experiences</h2><br>
-  <div class="exp-timeline">
-    <!-- Item 1 -->
-    <div class="exp-row">
-      <div class="exp-date">
-        <span>Novembre 2025 - Janvier 2026</span>
-      </div>
-      <div class="exp-content">
-        <h3>Développeuse Web <span class="company">|Innov Eclair Afrique </span></h3>
-        <p>Développement des sites vitrines et commercial</p>
-      </div>
-    </div>
-    <!-- Item 1 -->
-    <div class="exp-row">
-      <div class="exp-date">
-        <span>Juillet 2025 - Septembre 2025</span>
-      </div>
-      <div class="exp-content">
-        <h3>Développeuse Web <span class="company">|Port Autonome de Lomé </span></h3>
-        <p>Développement d’application web de gestion des absences et congés à la DSI du Port Autonome de Lomé</p>
-      </div>
-    </div>
-
-    <!-- Item 2 -->
-    <div class="exp-row">
-      <div class="exp-date">
-        <span>Janvier 2025 - janvier 2026</span>
-      </div>
-      <div class="exp-content">
-        <h3>Coordonatrice <span class="company">|Daytona</span></h3>
-        <p>Assistante de coordination au sein de la communauté Daytona, en appui au Pacer. Participation à l’organisation des activités communautaires, au suivi des initiatives et au soutien des développeurs dans l’adoption des outils et technologies Daytona.</p>
-      </div>
-    </div>
-
-    <!-- Item 3 -->
-    <div class="exp-row">
-      <div class="exp-date">
-        <span>Décembre 2024 - Aujourd'hui</span>
-      </div>
-      <div class="exp-content">
-        <h3>Graphiste <span class="company">|Amazing Girls in Tech</span></h3>
-        <p> Je conçois des affiches avec figma pour la communication des activités de la communauté sur le projet Amazing Tech Workshops</p>
-      </div>
-    </div>
-    </div>
-  </div>
-</section>
-
-    <!-- FORMATION -->
-    <section id="formations" class="education">
-      <h2>Parcours académique</h2>
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <h3>Bachelor 2 Système d'information</h3>
-            <p>Lomé Business School</p>
-            <span>2023 - 2025</span>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <h3>Baccalauréat série D</h3>
-            <p>Lycée Bamabodolo</p>
-            <span>2019 - 2022</span>
+          <div class="project-actions">
+            <a href="#" class="btn-action">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+              Website
+            </a>
+            <a href="#" class="btn-action">
+              <img src="assets/icons/github.svg" alt="" class="icon">
+              GitHub
+            </a>
           </div>
         </div>
       </div>
-    </section>
+
+      <!-- Projet 2 -->
+      <div class="project-card dev">
+        <div class="card-header">
+          <img src="images/fifi1.jpg" alt="Projet personnel">
+        </div>
+        <div class="card-body">
+          <h3 class="project-title">Personal Portfolio</h3>
+          <p class="project-description">Réalisation d’un portfolio présentant mes compétences et projets récents.</p>
+          <div class="tech-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+          </div>
+          <div class="project-actions">
+            <a href="#" class="btn-action">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+              Website
+            </a>
+            <a href="#" class="btn-action">
+              <img src="assets/icons/github.svg" alt="" class="icon">
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet 3 -->
+      <div class="project-card dev">
+        <div class="card-header">
+          <img src="images/didi2.jpg" alt="Affiche professionnelle">
+        </div>
+        <div class="card-body">
+          <h3 class="project-title">Admin Website</h3>
+          <p class="project-description">Site web personnel développé avec une structure robuste en PHP.</p>
+          <div class="tech-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>PHP</span>
+          </div>
+          <div class="project-actions">
+            <a href="#" class="btn-action">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+              Website
+            </a>
+            <a href="#" class="btn-action">
+              <img src="assets/icons/github.svg" alt="" class="icon">
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet 4 -->
+      <div class="project-card dev stage">
+        <div class="card-header">
+          <img src="images/didi4.jpg" alt="Affiche professionnelle">
+        </div>
+        <div class="card-body">
+          <h3 class="project-title">Laravel Admin</h3>
+          <p class="project-description">Participation au développement d’un module d’administration sous Laravel.</p>
+          <div class="tech-tags">
+            <span>Laravel</span>
+            <span>MySQL</span>
+            <span>Tailwind CSS</span>
+          </div>
+          <div class="project-actions">
+            <a href="#" class="btn-action">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+              Website
+            </a>
+            <a href="#" class="btn-action">
+              <img src="assets/icons/github.svg" alt="" class="icon">
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet 5 -->
+      <div class="project-card perso dev">
+        <div class="card-header">
+          <img src="images/didi5.jpg" alt="Affiche professionnelle">
+        </div>
+        <div class="card-body">
+          <h3 class="project-title">Dev Collab</h3>
+          <p class="project-description">Plateforme d’entraide entre développeurs étudiants pour le partage de
+            ressources.</p>
+          <div class="tech-tags">
+            <span>PHP</span>
+            <span>MySQL</span>
+            <span>HTML/CSS</span>
+          </div>
+          <div class="project-actions">
+            <a href="#" class="btn-action">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+              Website
+            </a>
+            <a href="#" class="btn-action">
+              <img src="assets/icons/github.svg" alt="" class="icon">
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet 6 -->
+      <div class="project-card design">
+        <div class="card-header">
+          <img src="images/didi6.jpg" alt="Affiche professionnelle">
+        </div>
+        <div class="card-body">
+          <h3 class="project-title">Branding Design</h3>
+          <p class="project-description">Création de visuels cohérents pour la communication visuelle de divers projets.
+          </p>
+          <div class="tech-tags">
+            <span>Figma</span>
+            <span>Canva</span>
+            <span>Branding</span>
+          </div>
+          <div class="project-actions">
+            <a href="#" class="btn-action">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+              Website
+            </a>
+            <a href="#" class="btn-action">
+              <img src="assets/icons/github.svg" alt="" class="icon">
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- SECTION EXPÉRIENCE (Originale) -->
+  <section id="experience" class="experience">
+    <h2>Mes Expériences</h2><br>
+    <div class="exp-timeline">
+      <!-- Item 1 -->
+      <div class="exp-row">
+        <div class="exp-date">
+          <span>Novembre 2025 - Janvier 2026</span>
+        </div>
+        <div class="exp-content">
+          <h3>Développeuse Web <span class="company">|Innov Eclair Afrique </span></h3>
+          <p>Conception et développement de sites vitrines et plateformes e-commerce. Optimisation de l’expérience
+            utilisateur et intégration de solutions numériques adaptées aux besoins des clients.</p>
+        </div>
+      </div>
+      <!-- Item 2 -->
+      <div class="exp-row">
+        <div class="exp-date">
+          <span>Juillet 2025 - Septembre 2025</span>
+        </div>
+        <div class="exp-content">
+          <h3>Développeuse Web <span class="company">|Port Autonome de Lomé </span></h3>
+          <p>Développement d’application web de gestion des absences et congés à la DSI du Port Autonome de Lomé</p>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="exp-row">
+        <div class="exp-date">
+          <span>Janvier 2025 - Décembre 2025</span>
+        </div>
+        <div class="exp-content">
+          <h3>Coordonatrice <span class="company">|Daytona</span></h3>
+          <p>Assistante de coordination au sein de la communauté Daytona, en appui au Pacer. Participation à
+            l’organisation des activités communautaires, au suivi des initiatives et au soutien des développeurs dans
+            l’adoption des outils et technologies Daytona.</p>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="exp-row">
+        <div class="exp-date">
+          <span>Décembre 2024 - Aujourd'hui</span>
+        </div>
+        <div class="exp-content">
+          <h3>Graphiste <span class="company">|Amazing Girls in Tech</span></h3>
+          <p> Je conçois des affiches avec figma pour la communication des activités de la communauté sur le projet
+            Amazing Tech Workshops</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="work-timeline" class="experience-section">
+    <h2 class="section-title">Mes Expériences</h2>
+
+    <div class="timeline-wrapper">
+      <div class="timeline-line"></div>
+
+      <!-- Item 1 -->
+      <div class="timeline-item">
+        <div class="timeline-left">
+          <h3 class="company-name">Innov Eclair Afrique</h3>
+          <span class="experience-date">Novembre 2025 - Janvier 2026</span>
+        </div>
+        <div class="timeline-center">
+          <div class="timeline-dot" style="--dot-color: #489586;"></div>
+        </div>
+        <div class="timeline-right">
+          <h3 class="job-title">Développeuse Web</h3>
+          <p class="job-description">Conception et développement de sites vitrines et plateformes e-commerce.
+            Optimisation de l’expérience utilisateur et intégration de solutions numériques adaptées aux besoins des
+            clients.</p>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="timeline-item">
+        <div class="timeline-left">
+          <h3 class="company-name">Port Autonome de Lomé</h3>
+          <span class="experience-date">Juillet 2025 - Septembre 2025</span>
+        </div>
+        <div class="timeline-center">
+          <div class="timeline-dot" style="--dot-color: #ff6f61;"></div>
+        </div>
+        <div class="timeline-right">
+          <h3 class="job-title">Développeuse Web</h3>
+          <p class="job-description">Développement d’application web de gestion des absences et congés à la DSI du Port
+            Autonome de Lomé.</p>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="timeline-item">
+        <div class="timeline-left">
+          <h3 class="company-name">Daytona</h3>
+          <span class="experience-date">Janvier 2025 - Décembre 2025</span>
+        </div>
+        <div class="timeline-center">
+          <div class="timeline-dot" style="--dot-color: #ffb74d;"></div>
+        </div>
+        <div class="timeline-right">
+          <h3 class="job-title">Coordonatrice</h3>
+          <p class="job-description">Assistante de coordination au sein de la communauté Daytona, en appui au Pacer.
+            Participation à l’organisation des activités communautaires.</p>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="timeline-item">
+        <div class="timeline-left">
+          <h3 class="company-name">Amazing Girls in Tech</h3>
+          <span class="experience-date">Décembre 2024 - Aujourd'hui</span>
+        </div>
+        <div class="timeline-center">
+          <div class="timeline-dot" style="--dot-color: #8e44ad;"></div>
+        </div>
+        <div class="timeline-right">
+          <h3 class="job-title">Graphiste</h3>
+          <p class="job-description">Je conçois des affiches avec Figma pour la communication des activités de la
+            communauté sur le projet Amazing Tech Workshops.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- SECTION FORMATION -->
+  <section id="formations" class="education-section">
+    <h2 class="section-title">Parcours Académique</h2>
+    <div class="education-grid">
+      <!-- Item 1 -->
+      <div class="education-card">
+        <div class="edu-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="#489586" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+            <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+          </svg>
+        </div>
+        <div class="edu-content">
+          <h3 class="degree-title">Bachelor 2 Système d'information</h3>
+          <p class="institution-name">Lomé Business School</p>
+          <span class="edu-date">2023 - 2025</span>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="education-card">
+        <div class="edu-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="#8e44ad" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+          </svg>
+        </div>
+        <div class="edu-content">
+          <h3 class="degree-title">Baccalauréat série D</h3>
+          <p class="institution-name">Lycée Bamabodolo</p>
+          <span class="edu-date">2019 - 2022</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- CONTACT -->
-<section id="contact" class="contact-section">
-  <h2>Contact</h2>
+  <section id="contact" class="contact-section">
+    <h2>Contact</h2>
 
-  <div class="contact-container">
-    <!-- Colonne gauche -->
-    <div class="contact-column">
-      <div class="contact-card">
-        <img src="assets/icons/linkedin.svg" alt="LinkedIn" class="icon">
-        <div>
-          <h3>LinkedIn</h3>
-          <a href="https://www.linkedin.com/in/diyanatou-ouro-mbon/" target="_blank">
-            diyanatou-ouro-mbon
-          </a>
+    <div class="contact-container">
+      <!-- Colonne gauche -->
+      <div class="contact-column">
+        <div class="contact-card">
+          <img src="assets/icons/linkedin.svg" alt="LinkedIn" class="icon">
+          <div>
+            <h3>LinkedIn</h3>
+            <a href="https://www.linkedin.com/in/diyanatou-ouro-mbon/" target="_blank">
+              diyanatou-ouro-mbon
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <img src="assets/icons/envelope.svg" alt="Email" class="icon">
+          <div>
+            <h3>Email</h3>
+            <p>dianaourombon@gmail.com</p>
+          </div>
         </div>
       </div>
 
-      <div class="contact-card">
-        <img src="assets/icons/envelope.svg" alt="Email" class="icon">
-        <div>
-          <h3>Email</h3>
-          <p>dianaourombon@gmail.com</p>
+      <!-- Colonne centrale -->
+      <div class="contact-column center">
+        <div class="cv-download">
+          <h3>Télécharger mon CV</h3>
+          <div class="cv-buttons">
+            <a href="assets/files/Diyanatou.pdf" class="cv-btn" download>🇫🇷 CV Français</a>
+            <a href="assets/files/Diyanatou.pdf" class="cv-btn" download>🇬🇧 CV Anglais</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Colonne droite -->
+      <div class="contact-column">
+        <div class="contact-card">
+          <img src="assets/icons/phone.svg" alt="Téléphone" class="icon">
+          <div>
+            <h3>Téléphone</h3>
+            <p>+228 90 53 32 88</p>
+          </div>
+        </div>
+        <div class="contact-card">
+          <img src="assets/icons/github.svg" alt="GitHub" class="icon">
+          <div>
+            <h3>GitHub</h3>
+            <a href="https://github.com/Diyanatou" target="_blank" rel="noopener noreferrer">
+              github.com/Diyanatou
+            </a>
+          </div>
         </div>
       </div>
     </div>
-
-    <!-- Colonne centrale -->
-    <div class="contact-column center">
-      <div class="cv-download">
-        <h3>Télécharger mon CV</h3>
-        <div class="cv-buttons">
-          <a href="assets/files/Diyanatou.pdf" class="cv-btn" download>🇫🇷 CV Français</a>
-          <a href="assets/files/Diyanatou.pdf" class="cv-btn" download>🇬🇧 CV Anglais</a>
-        </div>
-      </div>
     </div>
-
-    <!-- Colonne droite -->
-    <div class="contact-column">
-      <div class="contact-card">
-       <img src="assets/icons/phone.svg" alt="Téléphone" class="icon">
-        <div>
-          <h3>Téléphone</h3>
-          <p>+228 90 53 32 88</p>
-        </div>
-      </div>
-      <div class="contact-card">
-        <img src="assets/icons/github.svg" alt="GitHub" class="icon">
-        <div>
-          <h3>GitHub</h3>
-          <a href="https://github.com/Diyanatou" target="_blank" rel="noopener noreferrer">
-            github.com/Diyanatou
-          </a>
-        </div>
-      </div>
-      </div>
-    </div>
-  </div>
-</section>
-<script>
-  // Gestion des liens actifs
-  const links = document.querySelectorAll(".nav-links a");
-  links.forEach(link => {
-    link.addEventListener("click", function () {
-      links.forEach(l => l.classList.remove("active"));
-      this.classList.add("active");
-    });
-  });
-
-  // Menu hamburger
-  const menuIcon = document.getElementById("menu-icon");
-  const navLinksContainer = document.getElementById("nav-links");
-
-  menuIcon.addEventListener("click", () => {
-    navLinksContainer.classList.toggle("show");
-    menuIcon.classList.toggle("active");
-  });
-
-  // Animation "scroll" pour les cartes d'expérience
-  const expCards = document.querySelectorAll('.exp-row');
-
-  function showExpCards() {
-    const triggerBottom = window.innerHeight * 0.8;
-    expCards.forEach(card => {
-      const cardTop = card.getBoundingClientRect().top;
-      if (cardTop < triggerBottom) {
-        card.classList.add('show');
-      }
-    });
-  }
-
-  window.addEventListener('scroll', showExpCards);
-  window.addEventListener('load', showExpCards);
-
-  // Filtres des projets
-  const filterButtons = document.querySelectorAll(".filter-btn");
-  const projects = document.querySelectorAll(".project-item");
-
-  filterButtons.forEach(btn => {
-    btn.addEventListener("click", () => {
-      document.querySelector(".filter-btn.active").classList.remove("active");
-      btn.classList.add("active");
-
-      const category = btn.getAttribute("data-filter");
-
-      projects.forEach(project => {
-        if (category === "all" || project.classList.contains(category)) {
-          project.style.display = "block";
-        } else {
-          project.style.display = "none";
-        }
+  </section>
+  <script>
+    // Gestion des liens actifs
+    const links = document.querySelectorAll(".nav-links a");
+    links.forEach(link => {
+      link.addEventListener("click", function () {
+        links.forEach(l => l.classList.remove("active"));
+        this.classList.add("active");
       });
     });
-  });
-</script>
 
-  </body>
+    // Menu hamburger
+    const menuIcon = document.getElementById("menu-icon");
+    const navLinksContainer = document.getElementById("nav-links");
+
+    menuIcon.addEventListener("click", () => {
+      navLinksContainer.classList.toggle("show");
+      menuIcon.classList.toggle("active");
+    });
+
+    // Animation "scroll" pour les cartes d'expérience
+    const expCards = document.querySelectorAll('.exp-row');
+
+    function showExpCards() {
+      const triggerBottom = window.innerHeight * 0.8;
+      expCards.forEach(card => {
+        const cardTop = card.getBoundingClientRect().top;
+        if (cardTop < triggerBottom) {
+          card.classList.add('show');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', showExpCards);
+    window.addEventListener('load', showExpCards);
+
+    // Filtres des projets
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const projects = document.querySelectorAll(".project-card");
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelector(".filter-btn.active").classList.remove("active");
+        btn.classList.add("active");
+
+        const category = btn.getAttribute("data-filter");
+
+        projects.forEach(project => {
+          if (category === "all" || project.classList.contains(category)) {
+            project.style.display = "block";
+          } else {
+            project.style.display = "none";
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+
 </html>
