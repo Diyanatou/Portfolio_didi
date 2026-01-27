@@ -12,6 +12,25 @@
   --primary-navy: #0b1d31;
 }
 
+/* Visibility Utilities */
+.desktop-only {
+  display: block;
+}
+
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+}
+
 body {
   scroll-behavior: smooth;
   padding-top: 80px;
@@ -758,8 +777,7 @@ body {
 
 .timeline-center {
   position: absolute;
-  left: calc(50% - 9px);
-  /* Décalage à gauche accentué pour un centrage visuel parfait */
+  left: 50%;
   top: 5px;
   transform: translateX(-50%);
   display: flex;
@@ -972,9 +990,10 @@ body {
 }
 
 .contact-section h2 {
-  font-size: 28px;
-  font-weight: 700;
+  font-size: var(--h2-size);
+  font-weight: 800;
   margin-bottom: 40px;
+  color: var(--primary-navy);
   text-transform: uppercase;
   letter-spacing: 1px;
 }
