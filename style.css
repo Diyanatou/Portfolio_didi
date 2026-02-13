@@ -249,7 +249,7 @@ body {
   justify-content: center;
   align-items: flex-start;
   /* alignement en haut pour éviter trop d'espace */
-  background: #fff;
+  background: #ffffff;
   color: #000;
   font-family: 'Poppins', sans-serif;
   flex-wrap: wrap;
@@ -473,7 +473,7 @@ body {
 
 /* ===== SECTION À PROPOS ===== */
 .about {
-  background: #fff;
+  background: #ffffff;
   color: #000;
   padding: 80px 10%;
   font-family: 'Poppins', sans-serif;
@@ -561,7 +561,7 @@ body {
 
 /* SECTION COMPÉTENCES */
 .skills-section {
-  background: white;
+  background: #ffffff;
   color: #000;
   padding: 80px 10%;
   text-align: center;
@@ -714,7 +714,7 @@ body {
 
 /* SECTION PROJETS */
 .projects-section {
-  background-color: #fff;
+  background-color: #ffffff;
   color: #000;
   padding: 80px 10%;
   text-align: center;
@@ -891,7 +891,7 @@ body {
 
 /* ===== SECTION EXPÉRIENCE (NOUVELLE TIMELINE AFFINÉE) ===== */
 .experience-section {
-  background: #fdfdfd;
+  background: #ffffff;
   /* Fond très légèrement teinté comme l'image */
   color: #000;
   padding: 100px 10%;
@@ -1055,7 +1055,7 @@ body {
 
 /* ===== SECTION FORMATION (MODERNE) ===== */
 .education-section {
-  background: #fff;
+  background: #ffffff;
   color: #000;
   padding: 100px 10%;
   font-family: 'Poppins', sans-serif;
@@ -1158,7 +1158,7 @@ body {
 
 /* ===== CONTACT SECTION ===== */
 .contact-section {
-  background: #fff;
+  background: #ffffff;
   color: #000;
   padding: 60px 8%;
   font-family: 'Poppins', sans-serif;
@@ -1336,7 +1336,7 @@ body {
 
 /* ===== SECTION EXPÉRIENCE (Originale) ===== */
 .experience {
-  background: #fff;
+  background: #ffffff;
   color: #000;
   padding: 50px 8%;
   font-family: 'Poppins', sans-serif;
