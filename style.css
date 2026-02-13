@@ -479,22 +479,77 @@ body {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
+/* Container de la pile */
+.skill-stack {
+  position: relative;
+  z-index: 1;
+  transition: all 0.4s ease;
+}
+
+/* Les cartes en arrière-plan */
+.skill-card-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+  transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+  z-index: -1;
+  pointer-events: none;
+  /* Empêche les cartes du fond d'intercepter les clics */
+}
+
+/* Positionnement initial des cartes de fond (plus discret) */
+.skill-card-bg:nth-child(1) {
+  transform: translate(4px, 4px);
+  z-index: -1;
+}
+
+.skill-card-bg:nth-child(2) {
+  transform: translate(8px, 8px);
+  z-index: -2;
+}
+
+/* Styles de la carte principale */
 .skill-item {
   background: #fff;
-  padding: 25px;
+  padding: 30px;
   border-radius: 12px;
   text-align: left;
   border: 1px solid #000;
-  box-shadow: 0 4px 10px rgba(17, 16, 16, 0.05);
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  /* S'assure que toutes les cartes ont la même hauteur dans la grille */
 }
 
-.skill-item:hover {
-  transform: translateY(-8px);
+/* Animations au survol de la pile (très subtiles) */
+.skill-stack:hover .skill-item {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(63, 81, 181, 0.1);
+  border-color: #3f51b5;
+}
+
+.skill-stack:hover .skill-card-bg:nth-child(1) {
+  transform: translate(-8px, 6px) rotate(-2deg);
+  border-color: rgba(63, 81, 181, 0.2);
+}
+
+.skill-stack:hover .skill-card-bg:nth-child(2) {
+  transform: translate(10px, 8px) rotate(2deg);
+  border-color: rgba(156, 39, 176, 0.2);
 }
 
 .skill-item h3 {
