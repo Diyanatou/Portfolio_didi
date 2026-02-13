@@ -12,6 +12,80 @@
   --primary-navy: #0b1d31;
 }
 
+/* Scroll Reveal - Vibrant & Alive */
+.reveal {
+  opacity: 0;
+  transform: translateY(60px) scale(0.9) rotate(-1deg);
+  transition: opacity 0.8s ease, transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  will-change: transform, opacity;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0) scale(1) rotate(0);
+}
+
+/* Staggered children reveal - Bouncy */
+.reveal-stagger>* {
+  opacity: 0;
+  transform: translateY(40px) scale(0.85);
+  transition: opacity 0.6s ease, transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.reveal.active .reveal-stagger>*,
+.reveal.active.reveal-stagger>* {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* More granular delays for a true "flow" */
+.reveal-stagger>*:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.reveal-stagger>*:nth-child(2) {
+  transition-delay: 0.25s;
+}
+
+.reveal-stagger>*:nth-child(3) {
+  transition-delay: 0.4s;
+}
+
+.reveal-stagger>*:nth-child(4) {
+  transition-delay: 0.55s;
+}
+
+.reveal-stagger>*:nth-child(5) {
+  transition-delay: 0.7s;
+}
+
+.reveal-stagger>*:nth-child(6) {
+  transition-delay: 0.85s;
+}
+
+/* Pulse animation for important items */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.03);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.project-card:hover,
+.education-card:hover,
+.about-card:hover {
+  box-shadow: 0 20px 40px rgba(63, 81, 181, 0.2);
+  border-color: #3f51b5;
+  transform: translateY(-8px) scale(1.02) !important;
+}
+
 /* Visibility Utilities */
 .desktop-only {
   display: block;
@@ -279,21 +353,46 @@ body {
   opacity: 0.8;
 }
 
-/* LOGOS TECH */
-.tech-logos {
-  display: flex;
-  gap: 15px;
+/* LOGOS TECH CAROUSEL */
+.tech-stack-carousel {
+  width: 100%;
+  overflow: hidden;
   margin: 20px 0;
+  white-space: nowrap;
+  position: relative;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.tech-logos {
+  display: inline-flex;
+  gap: 30px;
+  animation: scroll 20s linear infinite;
+  width: max-content;
 }
 
 .tech-logos img {
-  width: 30px;
+  width: 40px;
   height: auto;
-  transition: transform 0.3s;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  filter: grayscale(20%);
 }
 
 .tech-logos img:hover {
-  transform: scale(1.2);
+  transform: scale(1.5) rotate(12deg);
+  filter: grayscale(0%);
+  cursor: pointer;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-50% - 15px));
+    /* Half because we duplicated the items */
+  }
 }
 
 .typing {
@@ -479,9 +578,9 @@ body {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 40px;
-  max-width: 1100px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -509,54 +608,76 @@ body {
   /* Empêche les cartes du fond d'intercepter les clics */
 }
 
-/* Positionnement initial des cartes de fond (plus discret) */
+/* Positions initiales des cartes de fond */
 .skill-card-bg:nth-child(1) {
   transform: translate(4px, 4px);
   z-index: -1;
+  border-color: rgba(0, 0, 0, 0.1);
 }
 
 .skill-card-bg:nth-child(2) {
   transform: translate(8px, 8px);
   z-index: -2;
+  border-color: rgba(0, 0, 0, 0.1);
 }
 
 /* Styles de la carte principale */
 .skill-item {
   background: #fff;
-  padding: 30px;
-  border-radius: 12px;
+  padding: 20px;
+  border-radius: 10px;
   text-align: left;
-  border: 1px solid #000;
+  border: 1px solid rgba(11, 29, 49, 0.15);
+  /* Bordure plus douce */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
   z-index: 2;
   height: 100%;
-  /* S'assure que toutes les cartes ont la même hauteur dans la grille */
 }
 
-/* Animations au survol de la pile (très subtiles) */
+/* Animations au survol pour un effet de pile éclatée (très subtile) */
 .skill-stack:hover .skill-item {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(63, 81, 181, 0.1);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(63, 81, 181, 0.12);
   border-color: #3f51b5;
 }
 
 .skill-stack:hover .skill-card-bg:nth-child(1) {
-  transform: translate(-8px, 6px) rotate(-2deg);
-  border-color: rgba(63, 81, 181, 0.2);
+  transform: translate(-6px, 4px) rotate(-1.5deg);
+  border-color: #3f51b5;
+  opacity: 0.6;
 }
 
 .skill-stack:hover .skill-card-bg:nth-child(2) {
-  transform: translate(10px, 8px) rotate(2deg);
-  border-color: rgba(156, 39, 176, 0.2);
+  transform: translate(8px, 6px) rotate(1.5deg);
+  border-color: #3f51b5;
+  opacity: 0.4;
+}
+
+/* Response for CV buttons on mobile */
+@media (max-width: 480px) {
+  .cv-buttons {
+    flex-wrap: wrap;
+  }
+}
+
+/* Effet au clic (Interactivité) */
+.skill-stack:active .skill-item {
+  transform: translateY(-5px) scale(0.95);
+  background: #f8f9ff;
+  border-color: #9c27b0;
+  /* Change de couleur au clic pour le feedback */
 }
 
 .skill-item h3 {
-  color: #3f51b5;
-  margin-bottom: 15px;
-  font-size: var(--h3-size);
+  color: var(--primary-navy);
+  margin-bottom: 12px;
+  font-size: 1.15rem;
   font-weight: 700;
+  border-bottom: 2px solid #3f51b5;
+  display: inline-block;
+  padding-bottom: 4px;
 }
 
 .skill-item ul {
@@ -1073,24 +1194,25 @@ body {
 
 /* Carte de contact */
 .contact-card {
-  background: #fafafa;
-  padding: 20px 25px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: #fff;
+  padding: 18px 22px;
   border-radius: 12px;
-  border: 1px solid #000;
+  border: 1px solid rgba(11, 29, 49, 0.1);
+  /* Subtle Navy border */
   width: 100%;
-  max-width: 330px;
+  max-width: 320px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 15px;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
 }
 
 .contact-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
   border-color: #3f51b5;
-  box-shadow: 0 4px 10px rgba(0, 188, 212, 0.2);
+  box-shadow: 0 10px 25px rgba(63, 81, 181, 0.1);
 }
 
 .contact-card .icon {
@@ -1125,41 +1247,73 @@ body {
 }
 
 .cv-download {
-  background: #fafafa;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 12px;
-  border: 1px solid #000;
-  padding: 30px 20px;
-  max-width: 350px;
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid rgba(11, 29, 49, 0.1);
+  padding: 25px;
+  width: 100%;
+  max-width: 400px;
+  /* More balanced size */
   text-align: center;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.cv-download::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 4px;
+  background: #3f51b5;
+  border-radius: 0 0 4px 4px;
 }
 
 .cv-download h3 {
-  font-size: 18px;
+  font-size: 1.1rem;
   margin-bottom: 20px;
+  color: var(--primary-navy);
+  font-weight: 700;
 }
 
 .cv-buttons {
   display: flex;
+  flex-direction: column;
+  /* Stacked as in the image */
   gap: 15px;
-  flex-wrap: wrap;
-  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  /* Removed overflow-x related properties */
+}
+
+.cv-buttons::-webkit-scrollbar {
+  display: none;
+  /* Cache la scrollbar sur Chrome/Safari */
 }
 
 .cv-btn {
   background: #3f51b5;
   color: white;
-  padding: 10px 18px;
-  border-radius: 8px;
-  font-size: 14px;
+  padding: 12px 25px;
+  border-radius: 12px;
+  font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
-  transition: 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  width: 100%;
+  max-width: 250px;
+  /* Consistent width for both */
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(63, 81, 181, 0.2);
 }
 
 .cv-btn:hover {
-  background: #3f51b5;
-  transform: scale(1.05);
+  background: var(--primary-navy);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(11, 29, 49, 0.3);
 }
 
 /* ===== RESPONSIVE ===== */

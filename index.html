@@ -36,14 +36,24 @@
   <section id="home" class="intro">
     <div class="main">
       <div class="detail">
-        <div class="tech-logos">
-          <img src="assets/devicons/html5-original.svg" alt="HTML">
-          <img src="assets/devicons/css3-original.svg" alt="CSS">
-          <img src="assets/devicons/php-original.svg" alt="PHP">
-          <img src="assets/devicons/laravel-original.svg" alt="Laravel">
-          <img src="assets/devicons/figma-original.svg" alt="Figma">
-          <img src="assets/devicons/mysql-original.svg" alt="MySQL">
-          <img src="assets/devicons/github.svg" alt="GitHub">
+        <div class="tech-stack-carousel">
+          <div class="tech-logos">
+            <img src="assets/devicons/html5-original.svg" alt="HTML">
+            <img src="assets/devicons/css3-original.svg" alt="CSS">
+            <img src="assets/devicons/php-original.svg" alt="PHP">
+            <img src="assets/devicons/laravel-original.svg" alt="Laravel">
+            <img src="assets/devicons/figma-original.svg" alt="Figma">
+            <img src="assets/devicons/mysql-original.svg" alt="MySQL">
+            <img src="assets/devicons/github.svg" alt="GitHub">
+            <!-- Duplicate for seamless scroll -->
+            <img src="assets/devicons/html5-original.svg" alt="HTML">
+            <img src="assets/devicons/css3-original.svg" alt="CSS">
+            <img src="assets/devicons/php-original.svg" alt="PHP">
+            <img src="assets/devicons/laravel-original.svg" alt="Laravel">
+            <img src="assets/devicons/figma-original.svg" alt="Figma">
+            <img src="assets/devicons/mysql-original.svg" alt="MySQL">
+            <img src="assets/devicons/github.svg" alt="GitHub">
+          </div>
         </div>
         <h1>
           Salut, je suis <span>OURO-M'BON Diyanatou</span>
@@ -58,7 +68,7 @@
     </div>
   </section>
   <!-- ===== À PROPOS ===== -->
-  <section id="about" class="about">
+  <section id="about" class="about reveal">
     <h2>À propos de moi</h2>
 
     <div class="about-card">
@@ -82,9 +92,9 @@
   </section>
 
   <!-- COMPÉTENCES -->
-  <section id="skills" class="skills-section">
+  <section id="skills" class="skills-section reveal">
     <h2>Mes compétences</h2>
-    <div class="skills-grid">
+    <div class="skills-grid reveal-stagger">
       <!-- Langages -->
       <div class="skill-stack">
         <div class="skill-card-bg"></div>
@@ -157,7 +167,7 @@
       </div>
     </div>
   </section>
-  <section id="projects" class="projects-section">
+  <section id="projects" class="projects-section reveal">
     <h2>Mes projets</h2>
 
     <!-- FILTRES -->
@@ -167,7 +177,7 @@
       <button class="filter-btn" data-filter="dev">Développement Web</button>
     </div>
     <!-- PROJETS -->
-    <div class="projects-grid">
+    <div class="projects-grid reveal-stagger">
 
       <!-- Projet 1 -->
       <div class="project-card dev">
@@ -407,7 +417,7 @@
   </section>
    -->
     <!-- SECTION EXPÉRIENCE -->
-    <div id="experience">
+    <div id="experience" class="reveal">
       <!-- VERSION PC -->
       <section id="work-timeline-pc" class="experience-section desktop-only">
         <h2 class="section-title">Mes Expériences</h2>
@@ -560,9 +570,9 @@
     </div>
 
     <!-- SECTION FORMATION -->
-    <section id="formations" class="education-section">
+    <section id="formations" class="education-section reveal">
       <h2 class="section-title">Parcours Académique</h2>
-      <div class="education-grid">
+      <div class="education-grid reveal-stagger">
         <!-- Item 1 -->
         <div class="education-card">
           <div class="edu-icon">
@@ -598,10 +608,10 @@
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="contact-section">
+    <section id="contact" class="contact-section reveal">
       <h2>Contact</h2>
 
-      <div class="contact-container">
+      <div class="contact-container reveal-stagger">
         <!-- Colonne gauche -->
         <div class="contact-column">
           <div class="contact-card">
@@ -656,6 +666,27 @@
       </div>
     </section>
     <script>
+      /**
+       * Animation d'apparition au défilement (Intersection Observer)
+       */
+      const revealCallback = (entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            // On peut arrêter d'observer une fois l'animation jouée
+            // observer.unobserve(entry.target); 
+          }
+        });
+      };
+
+      const revealObserver = new IntersectionObserver(revealCallback, {
+        threshold: 0.1 // Déclenche quand 10% de l'élément est visible
+      });
+
+      document.querySelectorAll('.reveal').forEach(el => {
+        revealObserver.observe(el);
+      });
+
       // Gestion des liens actifs
       const links = document.querySelectorAll(".nav-links a");
       links.forEach(link => {
@@ -674,21 +705,7 @@
         menuIcon.classList.toggle("active");
       });
 
-      // Animation "scroll" pour les cartes d'expérience
-      const expCards = document.querySelectorAll('.exp-row');
-
-      function showExpCards() {
-        const triggerBottom = window.innerHeight * 0.8;
-        expCards.forEach(card => {
-          const cardTop = card.getBoundingClientRect().top;
-          if (cardTop < triggerBottom) {
-            card.classList.add('show');
-          }
-        });
-      }
-
-      window.addEventListener('scroll', showExpCards);
-      window.addEventListener('load', showExpCards);
+      window.addEventListener('load', () => { }); // Redundant scripts removed
 
       // Filtres des projets
       const filterButtons = document.querySelectorAll(".filter-btn");
