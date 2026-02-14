@@ -553,10 +553,6 @@ body {
   .about-text {
     text-align: center;
   }
-
-  .about h2 {
-    font-size: 1.6rem;
-  }
 }
 
 /* SECTION COMPÉTENCES */
@@ -705,10 +701,6 @@ body {
   .skill-item {
     height: auto;
     padding: 20px;
-  }
-
-  .skills-section h2 {
-    font-size: 1.6rem;
   }
 }
 
@@ -1331,6 +1323,17 @@ body {
 @media (max-width: 768px) {
   section {
     padding: 40px 6%;
+  }
+
+  /* Titres de section uniformisés sur mobile */
+  .about h2,
+  .skills-section h2,
+  .projects-section h2,
+  .experience-section .section-title,
+  .education-section .section-title,
+  .contact-section h2,
+  .experience h2 {
+    font-size: 1.6rem;
   }
 }
 
