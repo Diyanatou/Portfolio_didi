@@ -595,60 +595,61 @@ body {
   width: 100%;
   height: 100%;
   background: #fff;
-  border-radius: 4px;
+  border-radius: 2px;
+  /* Coins très affûtés comme sur l'image */
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
-  transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   z-index: -1;
   pointer-events: none;
-  /* Empêche les cartes du fond d'intercepter les clics */
 }
 
-/* Positions initiales des cartes de fond visibles et distinctes */
+/* État initial : 2 cartes visibles (principale + une décalée en bas à droite comme l'image 1) */
 .skill-card-bg:nth-of-type(1) {
-  transform: translate(-8px, 6px) rotate(-1.5deg);
+  transform: translate(6px, 6px);
+  opacity: 0.8;
   z-index: -1;
-  opacity: 0.7;
 }
 
 .skill-card-bg:nth-of-type(2) {
-  transform: translate(8px, 12px) rotate(1.5deg);
+  transform: translate(0, 0);
+  opacity: 0;
   z-index: -2;
-  opacity: 0.5;
 }
 
 /* Styles de la carte principale */
 .skill-item {
   background: #fff;
-  padding: 20px;
-  border-radius: 4px;
+  padding: 22px;
+  border-radius: 2px;
   text-align: left;
-  border: 1px solid rgba(11, 29, 49, 0.15);
-  /* Bordure plus douce */
+  border: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   position: relative;
   z-index: 2;
   height: 100%;
 }
 
-/* Animations au survol pour un effet de pile plus subtil */
+/* Animations au survol : on éparpille en diagonale selon l'image 2 (Haut-D / Bas-G) */
 .skill-stack:hover .skill-item {
-  transform: translateY(-5px);
-  /* Slightly less lift */
-  box-shadow: 0 10px 25px rgba(63, 81, 181, 0.12);
+  transform: none;
+  /* Reste statique au milieu comme sur l'image */
+  box-shadow: 0 10px 30px rgba(63, 81, 181, 0.12);
   border-color: #3f51b5;
-  border-width: 2px;
+  border-width: 1px;
 }
 
 .skill-stack:hover .skill-card-bg:nth-of-type(1) {
-  transform: translate(-15px, 10px) rotate(-3deg);
-  opacity: 0.9;
+  transform: translate(8px, -8px);
+  /* Part vers le Haut-Droite au survol */
+  opacity: 0.6;
 }
 
 .skill-stack:hover .skill-card-bg:nth-of-type(2) {
-  transform: translate(15px, 15px) rotate(3deg);
-  opacity: 0.7;
+  transform: translate(-8px, 8px);
+  /* Part vers le Bas-Gauche au survol */
+  opacity: 0.6;
 }
 
 /* Response for CV buttons on mobile */
