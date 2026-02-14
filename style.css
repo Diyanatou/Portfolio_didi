@@ -604,17 +604,17 @@ body {
   /* Empêche les cartes du fond d'intercepter les clics */
 }
 
-/* Positions initiales des cartes de fond */
-.skill-card-bg:nth-child(1) {
-  transform: translate(4px, 4px);
+/* Positions initiales des cartes de fond pour qu'elles soient visibles dès le début */
+.skill-card-bg:nth-of-type(1) {
+  transform: translate(-6px, 4px) rotate(-1deg);
   z-index: -1;
-  border-color: rgba(0, 0, 0, 0.1);
+  opacity: 0.6;
 }
 
-.skill-card-bg:nth-child(2) {
-  transform: translate(8px, 8px);
+.skill-card-bg:nth-of-type(2) {
+  transform: translate(6px, 8px) rotate(1deg);
   z-index: -2;
-  border-color: rgba(0, 0, 0, 0.1);
+  opacity: 0.4;
 }
 
 /* Styles de la carte principale */
