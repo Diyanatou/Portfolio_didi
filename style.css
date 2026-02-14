@@ -632,23 +632,27 @@ body {
   height: 100%;
 }
 
-/* Animations au survol pour un effet de pile éclatée (très subtile) */
+/* Animations au survol pour un effet de pile éclatée */
 .skill-stack:hover .skill-item {
   transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(63, 81, 181, 0.12);
+  box-shadow: 0 12px 30px rgba(63, 81, 181, 0.15);
   border-color: #3f51b5;
+  border-width: 2px;
+  /* More visible */
 }
 
-.skill-stack:hover .skill-card-bg:nth-child(1) {
-  transform: translate(-6px, 4px) rotate(-1.5deg);
+.skill-stack:hover .skill-card-bg:nth-of-type(1) {
+  transform: translate(-10px, 6px) rotate(-2deg);
   border-color: #3f51b5;
+  border-width: 2px;
+  opacity: 0.8;
+}
+
+.skill-stack:hover .skill-card-bg:nth-of-type(2) {
+  transform: translate(12px, 8px) rotate(2deg);
+  border-color: #3f51b5;
+  border-width: 2px;
   opacity: 0.6;
-}
-
-.skill-stack:hover .skill-card-bg:nth-child(2) {
-  transform: translate(8px, 6px) rotate(1.5deg);
-  border-color: #3f51b5;
-  opacity: 0.4;
 }
 
 /* Response for CV buttons on mobile */
@@ -1064,10 +1068,13 @@ body {
 
 .education-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* Reduced to 300px to fit better */
   gap: 30px;
   max-width: 1000px;
   margin: 0 auto;
+  justify-content: center;
+  /* Center cards if they don't fill the row */
 }
 
 .education-card {
@@ -1145,6 +1152,14 @@ body {
     flex-direction: column;
     padding: 25px;
     gap: 15px;
+    text-align: center;
+    /* Center text on mobile */
+    align-items: center;
+    /* Center icon on mobile */
+  }
+
+  .edu-content {
+    text-align: center;
   }
 }
 
